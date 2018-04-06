@@ -16,8 +16,36 @@
     </ion-item>
   </ion-list>
 
+  <ion-list text-wrap>
+    <ion-list-header>Gold Token Imbuements</ion-list-header>
+
+    <ion-item *ngFor="let imbuement of tokenImbuements">
+      <h3>{{ imbuement.name }}</h3>
+      <small>{{ imbuement.description }}</small>
+
+      <ion-grid>
+        <ion-row>
+          <ion-col col-4>
+            {{ imbuement.basic }}
+            <img [src]="'/assets/imgs/'imbuement.basic'.gif'" alt="Gold Token GIF" item-start>
+          </ion-col>
+          <ion-col col-4>
+            {{ imbuement.intricate }}
+            <img [src]="'/assets/imgs/'imbuement.intricate'.gif'" alt="Gold Token GIF" item-start>
+          </ion-col>
+          <ion-col col-4>
+            {{ imbuement.powerfull }}
+            <img [src]="'/assets/imgs/'imbuement.powerfull'.gif'" alt="Gold Token GIF" item-start>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+  </ion-list>
+
   <ion-list>
-      <ion-item *ngFor="let imbuement of tokenImbuements">
+      <ion-list-header>General Imbuements</ion-list-header>
+  
+      <ion-item *ngFor="let imbuement of generalImbuements">
         <h3>{{ imbuement.name }}</h3>
         <small>{{ imbuement.description }}</small>
       </ion-item>
