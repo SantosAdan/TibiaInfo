@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Imbuements
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content no-padding>
+  <ion-list no-lines>
+    <ion-item>
+      <img src="/assets/imgs/gold-token.gif" alt="Gold Token GIF" item-start>
+
+      <ion-label floating>Price</ion-label>
+      <ion-input type="number" [(ngModel)]="goldTokenPrice" (ionChange)="calculateWithGoldToken()"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+      <ion-item *ngFor="let imbuement of tokenImbuements">
+        <h3>{{ imbuement.name }}</h3>
+        <small>{{ imbuement.description }}</small>
+      </ion-item>
+    </ion-list>
+</ion-content>

@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>News</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content no-padding>
+  
+  <ion-item id="rashidInfo" no-lines>
+      <img src="/assets/imgs/rashid.gif" alt="Rashid walking GIF" item-start>
+      
+      <p text-center>
+        <span>{{rashidCity}}</span>
+      </p>
+  </ion-item>
+
+  <ion-list no-lines>
+    <ion-list-header>Party Share Exp</ion-list-header>
+    <ion-item>
+        <ion-label floating>Your level</ion-label>
+        <ion-input type="number" [(ngModel)]="partyInfo.playerLvl" (ionChange)="getPartyInfo()"></ion-input>
+      </ion-item>
+    
+      <ion-item *ngIf="partyInfo.minLvl != 'null'">
+        <ion-grid>
+            <ion-row>
+              <ion-col col-6 text-center>
+                <ion-badge color="primary">Min LVL: {{partyInfo.minLvl}}</ion-badge>
+              </ion-col>
+              <ion-col col-6 text-center>
+                <ion-badge color="tabs">Max LVL: {{partyInfo.maxLvl}}</ion-badge>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+      </ion-item>
+  </ion-list>
+  
+</ion-content>

@@ -1,0 +1,8 @@
+{
+  "name": "tibia-info",
+  "app_id": "",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}

@@ -1,0 +1,15 @@
+page-home {
+    #rashidInfo p {
+        color: rgb(0, 0, 0) !important;
+    }
+
+    #rashidInfo p > span {
+        font-size: 1.3em;
+        font-weight: 800;
+        color: #fff;
+    }
+
+    #rashidInfo {
+        background: linear-gradient(to right, rgba(0, 170, 99, 0.4), rgba(0, 129, 75, 0.9));
+    }
+}
